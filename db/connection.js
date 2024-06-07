@@ -5,4 +5,12 @@ const connection = mysql.createconnection({
     user: "root",
     password: myPassword,
     database: "employeeTable"
-})
+}); 
+
+connection.connect(function(err) {
+    if(err){
+        throw(err);
+    }
+});
+
+module.exports = connection;
